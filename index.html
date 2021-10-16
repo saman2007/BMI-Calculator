@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BMI calculator</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/responsive.css">
+    </head>
+    <body>
+        <div class="loading">
+            <img src="images/1490.gif" alt="loading">
+        </div>
+        <header style="padding-bottom: 100px;"></header>
+        <div class="modal-container">
+            <div class="modal col-11 col-lg-4">
+                <div class="errorBase" style="display: none;">
+                    <h2 class="error"></h2>
+                </div>
+                <div class="infos-container">
+                    <div class="height-weight">
+                        <div>
+                            <h3>weight</h3>
+                            <p class="weight"></p>
+                        </div>
+                        <div>
+                            <h3>height</h3>
+                            <p class="height"></p>
+                        </div>
+                    </div>
+                    <div class="BMI">
+                        <div class="info">
+                            <h3>BMI</h3>
+                            <p class="number"></p>
+                        </div>
+                        <div class="situation" style="margin-bottom: 10px;">
+                            <p style="font-size: larger;">situation: <span style="font-size: x-large; color: rgb(0, 209, 28);"></span></p>
+                        </div>
+                        <div class="BMI-for" style="margin-bottom: 30px;">
+                            <p style="font-size: larger; text-align: center; line-height: 35px;">this BMI is calculated for people over <span style="font-size: x-large; color: rgb(0, 209, 28);">20 years old</span> with <span style="font-size: x-large; color: rgb(0, 209, 28);" class="height"></span> height and <span style="font-size: x-large; color: rgb(0, 209, 28);" class="weight"></span> weight.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="confirm">Confirm</button>
+            </div>
+        </div>
+        <div class="container justify-item-center">
+            <h2 class="title col-12">TELL ME MY BMI</h2>
+            <form class="row col-12 col-md-10 justify-item-center">
+                <div class="input-container col-12 col-md-10">
+                    <label for="weight">your weight(KG)</label>
+                    <div class="col-12 col-md-9 justify-content-center">
+                        <input class="col-9 col-sm-5 col-md-8 col-lg-6" type="number" placeholder="your weight" id="weight">
+                    </div>
+                </div>
+                <div class="input-container col-12 col-md-10">
+                    <label for="height">your height(CM)</label>
+                    <div class="col-12 col-md-9 justify-content-center">
+                        <input class="col-9 col-sm-5 col-md-8 col-lg-6" type="number" placeholder="your height" id="height">
+                    </div>
+                </div>
+            </form>
+            <button class="give-BMI">please give me my BMI</button>
+        </div>
+        <script src="js/CalculateBMI.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

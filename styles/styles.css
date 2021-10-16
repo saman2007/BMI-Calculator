@@ -1,0 +1,233 @@
+@import "reset.css";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css");
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    height: 100vh;
+}
+
+.loading {
+    background-color: rgb(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container {
+    background-color: rgb(0, 0, 0, 0.3);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    transition: opacity 0.3s ease;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.modal-container .modal .errorBase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.modal-container .modal .errorBase .error {
+    font-size: x-large;
+    color: rgb(255, 0, 0);
+}
+
+.modal-container.open {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal-container .modal {
+    overflow: auto;
+    padding: 3px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 2px 4px 30px rgb(77, 77, 77);
+    background: linear-gradient(45deg, #c7c7c7, #ececec);
+}
+
+
+.modal-container .modal .height-weight {
+    height: 25%;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding: 10px 50px 10px 50px;
+    background: linear-gradient(45deg, #00bc19, #00e01e);
+    box-shadow:  1px 1px 3px #008a12;
+}
+
+.modal-container .modal .height-weight h3 {
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.modal-container .modal .BMI {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.modal-container .modal .BMI .info {
+    align-items: center;
+    background: linear-gradient(225deg, #ffffff, #e6e6e6);
+    border-radius: 50%;
+    margin-top: -12%;
+    box-shadow:  1px 1px 3px #e0e0e0,
+    1px 1px 3px #ffffff;
+    margin-bottom: 30px;
+    width: 200px;
+    text-align: center;
+    padding: 40px;
+}
+
+.modal-container .modal .BMI .info h3 {
+    font-size: xx-large;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.modal-container .modal .BMI .info p {
+    font-size: xx-large;
+
+    margin-bottom: 10px;
+}
+
+.modal-container .modal .confirm {
+    padding: 10px 15px 10px 15px;
+    border: none;
+    background: linear-gradient(200deg, #00ff00, #00ac00);
+    font-size: large;
+    box-shadow: 0px 2px 5px rgb(77, 77, 77);
+    transition: 0.3s;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-container .modal .confirm:hover {
+    box-shadow: 0px 0px 2px rgb(77, 77, 77);
+}
+
+.container .title {
+    font-size: xxx-large;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.container form {
+    margin-bottom: 50px;
+}
+
+.container form .input-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.container form .input-container-years {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    font-size: large;
+}
+
+.container form .input-container-years .years-input {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.container form .input-container-years .years-input .age-input {
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container form .input-container-years select {
+    margin-left: 40px;
+    padding: 3px;
+    border: rgb(26, 192, 26) 2px solid;
+    border-radius: 10px;
+}
+
+.container form .input-container-years label {
+    margin-left: 10px;
+}
+
+.container form .input-container label {
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+.container form .input-container input {
+    border: rgb(26, 192, 26) 2px solid;
+    padding: 5px;
+    border-radius: 10px;
+    outline: none;
+    border-radius: 5px;
+    background: #e0e0e0;
+    box-shadow: inset 6px 6px 5px #a1a1a1,
+    inset -6px -6px 5px #ffffff;
+    transition: 0.40s;
+    font-size: larger;
+}
+
+.container form .input-container input:focus {
+    border-radius: 8px;
+background: linear-gradient(145deg, #f0f0f0, #cacaca);
+box-shadow:  13px 13px 26px #949494,
+             -13px -13px 26px #ffffff;
+}
+
+.container .give-BMI {
+    border: none;
+    font-size: large;
+    padding: 10px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #00ff00, #00ac00);
+    box-shadow: 3px 5px 25px #00cf00, -6px 7px 25px #0f0;
+    transition: 0.30s;   
+    color: rgb(235, 235, 235);
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.container .give-BMI:hover {
+    border-radius: 12px;
+    background: linear-gradient(100deg, #00ff00, #00ac00);
+    box-shadow: 0px 0px 15px #00cf00, 0px 0px 15px #0f0;
+
+}
+
+input[type=number]
+{
+  -moz-appearance: textfield;
+}
